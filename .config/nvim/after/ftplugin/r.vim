@@ -10,3 +10,9 @@ noremap <silent> <leader>w yiw:SlimeSend1 <C-r>"<CR>
 noremap <silent> <leader>h yiw:SlimeSend1 head(<C-r>")<CR>
 noremap <silent> <leader>n yiw:SlimeSend1 names(<C-r>")<CR>
 noremap <silent> <leader>s yiw:SlimeSend1 dim(<C-r>")<CR>
+noremap <silent> <C-u> :call TmuxScrollReplUp()<CR>
+noremap <silent> <C-d> :call TmuxScrollReplDown()<CR>
+noremap <silent> <C-g> :call TmuxScrollReplBottom()<CR>
+inoremap <C-p> %>%
+
+command -nargs=1 Ip SlimeSend1 install.packages(<f-args>)

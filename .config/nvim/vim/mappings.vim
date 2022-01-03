@@ -37,3 +37,9 @@ vnoremap <S-j> 10j
 vnoremap <S-k> 10k
 vnoremap <Tab> >gv
 vnoremap <leader>f zft
+inoremap <silent> <C-h> <Esc>:call search("[[(\'\"\{]", 'b', line('.'))<CR>i
+inoremap <silent> <C-l> <Esc>:call search("[])\'\"\{]", '', line('.'))<CR>a
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+
+

@@ -2,3 +2,4 @@
 autocmd BufEnter,FocusGained,BufRead * call system('tmux rename-window '.expand('%:t'))
 autocmd VimLeave * call system('tmux rename-window zsh')
 autocmd FileType tex set syntax=tex-custom
+autocmd FileType sql set syntax=sql-custom

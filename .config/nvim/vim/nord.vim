@@ -56,6 +56,14 @@ hi! link texFileArg                Normal
 hi! link texFileOpt                texFileArg
 hi! link TSMath                    TSFunction
 hi! link latexTSTitle              TSBoolean
+" SQL highlights
+hi!      sqlKeyword                guifg=#81a1c1               gui=bold
+hi! link sqlPeriod                 SqlKeyword
+hi       sqlString                 guifg=#a3be8c
+hi!      sqlFunction               guifg=#88c0d0               gui=bold
+hi!      sqlDelim                  guifg=#88c0d0
+hi!      sqlStringDelim            guifg=#88c0d0
+hi!      sqlVariable               guifg=#8fbcbb               gui=bold
 " LSP highlights
 hi!      LSPDiagnosticsSignWarning guifg=#ebcb8b
 " CMP highlights
