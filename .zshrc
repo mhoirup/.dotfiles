@@ -19,13 +19,17 @@ alias pip3='/opt/homebrew/bin/pip3'
 alias pip='/opt/homebrew/bin/pip3'
 
 function dotfiles {
-    git add .tmux.conf
-    git add .zshrc
-    git add .Rprofile
-    git add .config/*
-    git add .ipython/*
+    mkdir fonts
+    cp -r ~/Library/Fonts/OperatorMonoNerdFont-*.otf ~/fonts
+    git add fonts .tmux.conf .zshrc .Rprofile .config/* .ipython/*
+    # git add .tmux.conf
+    # git add .zshrc
+    # git add .Rprofile
+    # git add .config/*
+    # git add .ipython/*
     git commit -m "$1"
     git push -u origin main
+    rm ~/fonts
 }
 
 plugins=(
@@ -37,7 +41,6 @@ ZSH_DISABLE_COMPFIX="true"
 source $ZSH/oh-my-zsh.sh
 
 PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} '
-
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -e "/Applications/kitty.app/Contents/Resources/kitty/shell-integration/kitty.zsh"; then source "/Applications/kitty.app/Contents/Resources/kitty/shell-integration/kitty.zsh"; fi
