@@ -22,14 +22,9 @@ function dotfiles {
     mkdir fonts
     cp -r ~/Library/Fonts/OperatorMonoNerdFont-*.otf ~/fonts
     git add fonts .tmux.conf .zshrc .Rprofile .config/* .ipython/*
-    # git add .tmux.conf
-    # git add .zshrc
-    # git add .Rprofile
-    # git add .config/*
-    # git add .ipython/*
     git commit -m "$1"
     git push -u origin main
-    rm ~/fonts
+    rm -rf ~/fonts
 }
 
 plugins=(
